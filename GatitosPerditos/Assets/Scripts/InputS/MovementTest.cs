@@ -26,6 +26,8 @@ public class MovementTest : MonoBehaviour
         jumped = false;
 
         rb = GetComponent<Rigidbody2D>();
+
+
     }
 
     // Update is called once per frame

@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a03271be061fa4b4f945573ad6a98d64, type: 3}
   m_Name: Player2
   m_EditorClassIdentifier: 
-  axis: Horizontal_1
-  jump: 20000000
-  meow: 7a000000
+  axis: Horizontal_2
+  jump: 1101000072010000
+  meow: 0d00000073010000

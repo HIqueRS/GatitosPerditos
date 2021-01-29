@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: Player1
   m_EditorClassIdentifier: 
   axis: Horizontal_1
-  jump: 20000000
-  meow: 7a000000
+  jump: 770000005e010000
+  meow: 200000005f010000
