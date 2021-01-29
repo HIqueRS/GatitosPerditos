@@ -10,21 +10,23 @@ public class MovementTest : MonoBehaviour
     private InputSchema control;
     [SerializeField]
     private GameStatus status;
-    
     [SerializeField]
-    private string tagFish;
+    private GameObject otherPlayer;
+    [SerializeField]
+    private Image otherMeow;
 
     [SerializeField]
     private Image[] fishes;
 
-
-   
+    [SerializeField]
+    private string tagFish;
 
     [SerializeField]
     private float speed;
 
     [SerializeField]
     private float jumpForce;
+
     [SerializeField]
     private int fish;
 
@@ -33,6 +35,8 @@ public class MovementTest : MonoBehaviour
     private bool meowed;
     private float dir;
     private Rigidbody2D rb;
+
+    private Vector2 meowDir;
 
     
     // Start is called before the first frame update
@@ -63,7 +67,39 @@ public class MovementTest : MonoBehaviour
     {
         meowed = control.IsMeowning();
 
+        if(meowed)
+        {
+            if(status.fish[fish] >= 5)
+            {
+                meowDir = transform.position - otherPlayer.transform.position;
+                meowDir = meowDir.normalized;
+
+                otherMeow.color = Color.white;
+
+                
+
+                if(fish == 1)
+                {
+                    otherMeow.transform.localPosition = meowDir*100;
+                }
+                else
+                {
+                    otherMeow.transform.localPosition = (new Vector3(meowDir.x*-1,meowDir.y,0)*100);
+                }
+
+                StartCoroutine(DownMeow());
+            }
+        }
     }
+
+    IEnumerator DownMeow()
+    {
+        // suspend execution for 5 seconds
+        yield return new WaitForSeconds(0.6f);
+        
+        otherMeow.color = new Color(0,0,0,0);
+    }
+
 
     private void Move()
     {
