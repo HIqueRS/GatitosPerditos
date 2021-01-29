@@ -173,6 +173,8 @@ MonoBehaviour:
   - {fileID: 571204531477097420, guid: 8b36e7a93f7254c4ebc07be1ea94abe3, type: 3}
   alturaSala: 9.6
   larguraSala: 7.68
+  altura: 7
+  largura: 9
 --- !u!1 &2144302439
 GameObject:
   m_ObjectHideFlags: 0
