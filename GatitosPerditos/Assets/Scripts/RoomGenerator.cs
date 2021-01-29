@@ -124,8 +124,8 @@ public class RoomGenerator : MonoBehaviour
 	
 	private void InstanciaSala(int linha, int coluna, int sala)
 	{
-		transformSala.x = 25 - (10 * linha);
-		transformSala.y = -20 + (8 * coluna);
+		transformSala.x = 0 - (5 * linha);
+		transformSala.y = 0+ (6.4f * coluna);
 		transformSala.z = 0;
 
 		GameObject.Instantiate(salas[sala], transformSala, Quaternion.identity);
