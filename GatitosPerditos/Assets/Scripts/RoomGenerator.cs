@@ -9,6 +9,9 @@ public class RoomGenerator : MonoBehaviour
     [SerializeField]
     private GameObject []salas;
 
+	[SerializeField]
+	private float alturaSala, larguraSala;
+
     private int[,] matriz;
 
 	private int xMeio = 2;
@@ -124,8 +127,8 @@ public class RoomGenerator : MonoBehaviour
 	
 	private void InstanciaSala(int linha, int coluna, int sala)
 	{
-		transformSala.x = 0 - (5 * linha);
-		transformSala.y = 0+ (6.4f * coluna);
+		transformSala.x = 0 - (larguraSala * linha);
+		transformSala.y = 0+ (alturaSala * coluna);
 		transformSala.z = 0;
 
 		GameObject.Instantiate(salas[sala], transformSala, Quaternion.identity);

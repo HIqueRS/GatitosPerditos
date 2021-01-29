@@ -171,6 +171,8 @@ MonoBehaviour:
   - {fileID: 2565325772475622813, guid: feffb22b7a9013643adb33a7ff083be7, type: 3}
   - {fileID: 3247254771167097551, guid: dcbf5ef02cc7fb04e8b9aa6017d483bc, type: 3}
   - {fileID: 571204531477097420, guid: 8b36e7a93f7254c4ebc07be1ea94abe3, type: 3}
+  alturaSala: 9.6
+  larguraSala: 7.68
 --- !u!1 &2144302439
 GameObject:
   m_ObjectHideFlags: 0
