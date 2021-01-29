@@ -5,6 +5,8 @@ TagManager:
   serializedVersion: 2
   tags:
   - Ground
+  - Fish1
+  - Fish2
   layers:
   - Default
   - TransparentFX
@@ -16,8 +18,8 @@ TagManager:
   - 
   - Player
   - Player2
-  - 
-  - 
+  - GroundCheck
+  - Ground
   - 
   - 
   - 
