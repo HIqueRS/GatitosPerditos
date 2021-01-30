@@ -51,13 +51,8 @@ MonoBehaviour:
   status: {fileID: 11400000, guid: f377c5697bdf4994184c0501a16a670b, type: 2}
   otherPlayer: {fileID: 0}
   otherMeow: {fileID: 0}
-  fishes:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
   tagFish: Fish1
+  tagFishUI: FishUI1
   speed: 5
   jumpForce: 10
   fish: 0

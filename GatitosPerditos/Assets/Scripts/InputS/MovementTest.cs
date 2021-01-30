@@ -10,16 +10,17 @@ public class MovementTest : MonoBehaviour
     private InputSchema control;
     [SerializeField]
     private GameStatus status;
-    [SerializeField]
-    private GameObject otherPlayer;
-    [SerializeField]
-    private Image otherMeow;
+    
+    public GameObject otherPlayer;
+    
+    private GameObject otherMeow;
 
-    [SerializeField]
-    private Image[] fishes;
+    private GameObject[] fishes;
 
     [SerializeField]
     private string tagFish;
+    [SerializeField]
+    private string tagFishUI;
 
     [SerializeField]
     private float speed;
@@ -50,6 +51,20 @@ public class MovementTest : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
 
        status.fish[fish] = 0;
+
+       
+
+       switch (fish)
+       {
+            case 0:
+                    fishes =  GameObject.FindGameObjectsWithTag("FishUI1");
+                    otherMeow = GameObject.FindGameObjectWithTag("Meow2");
+                break;
+            case 1:  
+                    fishes =  GameObject.FindGameObjectsWithTag("FishUI2");
+                    otherMeow = GameObject.FindGameObjectWithTag("Meow1");
+                break;
+       }
     }
 
     // Update is called once per frame
@@ -76,7 +91,7 @@ public class MovementTest : MonoBehaviour
                 meowDir = transform.position - otherPlayer.transform.position;
                 meowDir = meowDir.normalized;
 
-                otherMeow.color = Color.white;
+                otherMeow.GetComponent<Image>().color = Color.white;
 
                 
 
@@ -89,7 +104,7 @@ public class MovementTest : MonoBehaviour
                     otherMeow.transform.localPosition = (new Vector3(meowDir.x*-1,meowDir.y,0)*100);
                 }
 
-                if(position == otherMeow.GetComponent<MovementTest>().position)
+                if(position == otherPlayer.GetComponent<MovementTest>().position)
                 {
                     //win condition
                 }
@@ -104,7 +119,7 @@ public class MovementTest : MonoBehaviour
         // suspend execution for 5 seconds
         yield return new WaitForSeconds(0.6f);
         
-        otherMeow.color = new Color(0,0,0,0);
+       otherMeow.GetComponent<Image>().color = new Color(0,0,0,0);
     }
 
 
@@ -141,7 +156,9 @@ public class MovementTest : MonoBehaviour
         {
             status.fish[fish]+=1;
 
-            fishes[status.fish[fish]-1].color = Color.white;
+            fishes[status.fish[fish]-1].GetComponent<Image>().color = Color.white;
+
+            
 
             GameObject.Destroy(collision.gameObject);
 

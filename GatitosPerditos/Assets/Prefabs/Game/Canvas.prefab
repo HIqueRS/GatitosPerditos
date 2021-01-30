@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 4389579640227908235}
   m_Layer: 5
   m_Name: Image
-  m_TagString: Untagged
+  m_TagString: Meow2
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -123,7 +123,7 @@ GameObject:
   - component: {fileID: 4389579640472851220}
   m_Layer: 5
   m_Name: FishUI
-  m_TagString: Untagged
+  m_TagString: FishUI1
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -233,7 +233,7 @@ GameObject:
   - component: {fileID: 4389579640635919937}
   m_Layer: 5
   m_Name: FishUI
-  m_TagString: Untagged
+  m_TagString: FishUI1
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -307,7 +307,7 @@ GameObject:
   - component: {fileID: 4389579641105584188}
   m_Layer: 5
   m_Name: FishUI
-  m_TagString: Untagged
+  m_TagString: FishUI1
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -381,7 +381,7 @@ GameObject:
   - component: {fileID: 4389579641286694215}
   m_Layer: 5
   m_Name: FishUI
-  m_TagString: Untagged
+  m_TagString: FishUI2
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -455,7 +455,7 @@ GameObject:
   - component: {fileID: 4389579641520358184}
   m_Layer: 5
   m_Name: FishUI
-  m_TagString: Untagged
+  m_TagString: FishUI1
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -647,7 +647,7 @@ GameObject:
   - component: {fileID: 4389579641633790994}
   m_Layer: 5
   m_Name: Image
-  m_TagString: Untagged
+  m_TagString: Meow1
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -721,7 +721,7 @@ GameObject:
   - component: {fileID: 4389579641743497553}
   m_Layer: 5
   m_Name: FishUI (1)
-  m_TagString: Untagged
+  m_TagString: FishUI2
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -795,7 +795,7 @@ GameObject:
   - component: {fileID: 4389579641823698459}
   m_Layer: 5
   m_Name: FishUI (4)
-  m_TagString: Untagged
+  m_TagString: FishUI2
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -943,7 +943,7 @@ GameObject:
   - component: {fileID: 4389579641966907097}
   m_Layer: 5
   m_Name: FishUI (3)
-  m_TagString: Untagged
+  m_TagString: FishUI2
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1017,7 +1017,7 @@ GameObject:
   - component: {fileID: 4389579642049929215}
   m_Layer: 5
   m_Name: FishUI (2)
-  m_TagString: Untagged
+  m_TagString: FishUI2
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1171,7 +1171,7 @@ GameObject:
   - component: {fileID: 4389579642189383723}
   m_Layer: 5
   m_Name: FishUI
-  m_TagString: Untagged
+  m_TagString: FishUI1
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

@@ -8,6 +8,8 @@ public class RoomGenerator : MonoBehaviour
 
     [SerializeField]
     private GameObject []salas;
+	[SerializeField]
+    private GameObject []objects;
 
 	[SerializeField]
 	private float alturaSala, larguraSala;
@@ -25,7 +27,7 @@ public class RoomGenerator : MonoBehaviour
 	private Vector3 transformSala;
 
 
-
+	private Vector3 positionObject;
     void Start()
     {
 		salasViaveis = 0;
@@ -47,28 +49,27 @@ public class RoomGenerator : MonoBehaviour
 			for(int j = 0; j < largura; j++)
 			{
 				
-
 				InstanciaSala(i, j, matriz[i, j]);
-					
 			}
 		}
 
 
-
+		InitializeObjects();
 
     }
 
     private void RandTile(int linha, int coluna)
 	{
-		int numero;
+		int numero,intMaxSala;
 		float maxSala;
+		
 
 
 		maxSala = salas.Length;
 
 		maxSala = maxSala *1.2f;
 		
-		
+		intMaxSala = (int)maxSala;
 
 		if (xMeio == linha && yMeio == coluna)
 		{
@@ -76,23 +77,36 @@ public class RoomGenerator : MonoBehaviour
 		}
 		else
 		{
-			numero = Random.Range(1,(int)maxSala);
-			Debug.Log(numero + " " + linha + ", " + coluna);
+			numero = Random.Range(1,intMaxSala);
+			
 		}
 
-		if(numero > salas.Length-1)
+		
+
+		// if(numero < salas.Length-2 && numero < 0)
+		// {
+		// 	matriz[linha, coluna] = 0;
+		// }
+		// else
+		// {
+		// 	Debug.Log(numero);
+		// 	matriz[linha, coluna] = numero;
+			
+		// }
+
+		if(numero > salas.Length-2)
+		{
+			matriz[linha, coluna] = 0;
+		}		
+		else if(numero <= 0)
 		{
 			matriz[linha, coluna] = 0;
 		}
 		else
 		{
-			matriz[linha, coluna] = numero;
 			
+				matriz[linha, coluna] = numero;
 		}
-
-
-		
-
 
 
 		if (linha - 1 >= 0)
@@ -134,9 +148,15 @@ public class RoomGenerator : MonoBehaviour
 		transformSala.y = 0 - (alturaSala * linha);
 		transformSala.z = 0;
 
-		GameObject aux;
-		aux = GameObject.Instantiate(salas[sala], transformSala, Quaternion.identity);
-		aux.GetComponentInChildren<RoomStats>().id = new Vector2(linha,coluna);
+
+		if(sala != -1)
+		{
+			GameObject aux;
+			aux = GameObject.Instantiate(salas[sala], transformSala, Quaternion.identity);
+			aux.GetComponentInChildren<RoomStats>().id = new Vector2(linha,coluna);
+		}
+
+		
 	}
 
 	private void VerificaNumeroSalas()
@@ -174,6 +194,65 @@ public class RoomGenerator : MonoBehaviour
 
 	private void InitializeObjects()
 	{
+		int xpos,ypos;
+		GameObject p1,p2;
+
+		
+		
+		for (int i = 0; i < objects.Length -2; i++)
+		{
+			do
+			{
+				xpos = Random.Range(1,altura-1);
+				ypos = Random.Range(1,largura-1);
+
+				//Debug.Log(matriz[xpos,ypos]);
+
+			} while (matriz[xpos,ypos] < 0);
+
+			matriz[xpos,ypos] = -1;
+
+			positionObject.x = (larguraSala * ypos);
+			positionObject.y = -(alturaSala * xpos);
+			positionObject.z = 0;
+
+			GameObject.Instantiate(objects[i],positionObject,Quaternion.identity);
+
+		}
+
+		do
+		{
+			xpos = Random.Range(1,altura-1);
+			ypos = Random.Range(1,largura-1);
+			//Debug.Log(matriz[xpos,ypos]);
+		} while (matriz[xpos,ypos] <= 0);
+
+		matriz[xpos,ypos] = -1;
+
+		positionObject.x = (larguraSala * ypos);
+		positionObject.y = -(alturaSala * xpos);
+		positionObject.z = 0;
+
+		p1 = GameObject.Instantiate(objects[10],positionObject,Quaternion.identity);
+
+		do
+		{
+			xpos = Random.Range(1,altura-1);
+			ypos = Random.Range(1,largura-1);
+			//Debug.Log(matriz[xpos,ypos]);
+
+		} while (matriz[xpos,ypos] <= 0);
+
+		matriz[xpos,ypos] = -1;
+
+		positionObject.x = (larguraSala * ypos);
+		positionObject.y = -(alturaSala * xpos);
+		positionObject.z = 0;
+
+		p2 = GameObject.Instantiate(objects[11],positionObject,Quaternion.identity);
+
+		p1.transform.GetComponentInChildren<MovementTest>().otherPlayer = p2.transform.GetChild(1).gameObject;
+		p2.transform.GetComponentInChildren<MovementTest>().otherPlayer = p1.transform.GetChild(1).gameObject;
 
 	}
 }

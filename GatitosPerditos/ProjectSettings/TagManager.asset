@@ -8,6 +8,10 @@ TagManager:
   - Fish1
   - Fish2
   - Room
+  - FishUI1
+  - FishUI2
+  - Meow1
+  - Meow2
   layers:
   - Default
   - TransparentFX
