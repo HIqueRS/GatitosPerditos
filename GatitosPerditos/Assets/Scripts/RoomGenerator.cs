@@ -46,73 +46,52 @@ public class RoomGenerator : MonoBehaviour
 		{
 			for(int j = 0; j < largura; j++)
 			{
-				switch(matriz[i , j])
-				{
-					case 0:
-						InstanciaSala(i, j, 0);
-						break;
-					case 1:
-						InstanciaSala(i, j, 1);
-						break;
-					case 2:
-						InstanciaSala(i, j, 2);
-						break;
-					case 3:
-						InstanciaSala(i, j, 3);
-						break;
-					case 4:
-						InstanciaSala(i, j, 4);
-						break;
-					case 5:
-						InstanciaSala(i, j, 5);
-						break;
-					default:
-						break;
-				}
+				
+
+				InstanciaSala(i, j, matriz[i, j]);
 					
 			}
 		}
+
+
+
 
     }
 
     private void RandTile(int linha, int coluna)
 	{
 		int numero;
+		float maxSala;
+
+
+		maxSala = salas.Length;
+
+		maxSala = maxSala *1.2f;
+		
+		
 
 		if (xMeio == linha && yMeio == coluna)
 		{
-			numero = Random.Range(41, 201);
+			numero = Random.Range(1, salas.Length - 1);
 		}
 		else
 		{
-			numero = Random.Range(0, 201);
+			numero = Random.Range(1,(int)maxSala);
+			Debug.Log(numero + " " + linha + ", " + coluna);
 		}
 
-
-		if (numero >= 0 && numero <= 40)
+		if(numero > salas.Length-1)
 		{
 			matriz[linha, coluna] = 0;
 		}
-		else if (numero > 40 && numero <= 72)
-		{
-			matriz[linha, coluna] = 1;
-		}
-		else if (numero > 72 && numero <= 104)
-		{
-			matriz[linha, coluna] = 2;
-		}
-		else if (numero > 104 && numero <= 136)
-		{
-			matriz[linha, coluna] = 3;
-		}
-		else if (numero > 136 && numero <= 168)
-		{
-			matriz[linha, coluna] = 4;
-		}
 		else
 		{
-			matriz[linha, coluna] = 5;
+			matriz[linha, coluna] = numero;
+			
 		}
+
+
+		
 
 
 
@@ -191,6 +170,11 @@ public class RoomGenerator : MonoBehaviour
 				matriz[i, j] = -1;
 			}
 		}
+	}
+
+	private void InitializeObjects()
+	{
+
 	}
 }
 
