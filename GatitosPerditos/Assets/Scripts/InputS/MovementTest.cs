@@ -38,6 +38,8 @@ public class MovementTest : MonoBehaviour
 
     private Vector2 meowDir;
 
+    public Vector2 position;
+
     
     // Start is called before the first frame update
     void Start()
@@ -85,6 +87,11 @@ public class MovementTest : MonoBehaviour
                 else
                 {
                     otherMeow.transform.localPosition = (new Vector3(meowDir.x*-1,meowDir.y,0)*100);
+                }
+
+                if(position == otherMeow.GetComponent<MovementTest>().position)
+                {
+                    //win condition
                 }
 
                 StartCoroutine(DownMeow());

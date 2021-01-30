@@ -34,13 +34,12 @@ public class RoomGenerator : MonoBehaviour
 
         matriz = new int[altura, largura];
 
-		while(salasViaveis < 30)
+		while(salasViaveis < 12)
 		{
 			salasViaveis = 0;
 			IniciarMatriz();
 			RandTile(xMeio, yMeio);
 			VerificaNumeroSalas();
-			Debug.Log(salasViaveis);
 		}
 
 		for(int i = 0; i < altura; i++)
@@ -156,7 +155,10 @@ public class RoomGenerator : MonoBehaviour
 		transformSala.y = 0 - (alturaSala * linha);
 		transformSala.z = 0;
 
-		GameObject.Instantiate(salas[sala], transformSala, Quaternion.identity);
+		GameObject aux;
+		aux = GameObject.Instantiate(salas[sala], transformSala, Quaternion.identity);
+		//Debug.Log( aux.transform.childCount);
+		aux.GetComponentInChildren<RoomStats>().id = new Vector2(linha,coluna);
 	}
 
 	private void VerificaNumeroSalas()
