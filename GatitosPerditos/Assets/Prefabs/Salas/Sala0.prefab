@@ -194,6 +194,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: {x: 0, y: 0}
+  camPos: {fileID: 1160730157015633888}
 --- !u!1 &544573522823994250
 GameObject:
   m_ObjectHideFlags: 0

@@ -157,7 +157,6 @@ public class RoomGenerator : MonoBehaviour
 
 		GameObject aux;
 		aux = GameObject.Instantiate(salas[sala], transformSala, Quaternion.identity);
-		//Debug.Log( aux.transform.childCount);
 		aux.GetComponentInChildren<RoomStats>().id = new Vector2(linha,coluna);
 	}
 
