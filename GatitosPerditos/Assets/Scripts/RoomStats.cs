@@ -15,7 +15,7 @@ public class RoomStats : MonoBehaviour
         {
             other.gameObject.GetComponent<MovementTest>().position = id;
 
-            other.transform.parent.GetChild(0).transform.position = camPos.position;
+            other.transform.parent.GetChild(0).transform.position = new Vector3( camPos.position.x,camPos.position.y,-10);
         }
     }
 }
