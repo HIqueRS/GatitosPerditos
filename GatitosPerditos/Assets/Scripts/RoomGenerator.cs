@@ -81,19 +81,6 @@ public class RoomGenerator : MonoBehaviour
 			
 		}
 
-		
-
-		// if(numero < salas.Length-2 && numero < 0)
-		// {
-		// 	matriz[linha, coluna] = 0;
-		// }
-		// else
-		// {
-		// 	Debug.Log(numero);
-		// 	matriz[linha, coluna] = numero;
-			
-		// }
-
 		if(numero > salas.Length-2)
 		{
 			matriz[linha, coluna] = 0;
@@ -104,10 +91,8 @@ public class RoomGenerator : MonoBehaviour
 		}
 		else
 		{
-			
-				matriz[linha, coluna] = numero;
+			matriz[linha, coluna] = numero;
 		}
-
 
 		if (linha - 1 >= 0)
 		{
