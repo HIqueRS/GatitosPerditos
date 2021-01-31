@@ -206,9 +206,10 @@ public class RoomGenerator : MonoBehaviour
 				xpos = Random.Range(1,altura-1);
 				ypos = Random.Range(1,largura-1);
 
-				//Debug.Log(matriz[xpos,ypos]);
 
-			} while (matriz[xpos,ypos] < 0);
+			} while (matriz[xpos,ypos] <= 0);
+			
+			Debug.Log(matriz[xpos,ypos]);
 
 			matriz[xpos,ypos] = -1;
 
