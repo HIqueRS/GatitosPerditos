@@ -31,6 +31,8 @@ public class MovementTest : MonoBehaviour
 
     [SerializeField]
     private int fish;
+    [SerializeField]
+    private AudioSource meowAudio;
 
     private bool isGrounded;
     private bool jumped;
@@ -45,6 +47,12 @@ public class MovementTest : MonoBehaviour
     private Animator animator;
 
     private SpriteRenderer sprite;
+
+
+    public Sprite meowRight;
+    public Sprite meowLeft;
+
+
 
     
     // Start is called before the first frame update
@@ -138,15 +146,27 @@ public class MovementTest : MonoBehaviour
 
                 otherMeow.GetComponent<Image>().color = Color.white;
 
+
+                if(meowDir.x < 0)
+                {
+                    otherMeow.GetComponent<Image>().sprite = meowLeft;
+                }
+                else
+                {
+                    otherMeow.GetComponent<Image>().sprite = meowRight;
+                }
+
                 
 
                 if(fish == 1)
                 {
                     otherMeow.transform.localPosition = meowDir*200;
+                    otherMeow.transform.localPosition = meowDir*180;
                 }
                 else
                 {
                     otherMeow.transform.localPosition = (new Vector3(meowDir.x*-1,meowDir.y,0)*200);
+                    otherMeow.transform.localPosition = (new Vector3(meowDir.x*-1,meowDir.y,0)*180);
                 }
 
                 if(position == otherPlayer.GetComponent<MovementTest>().position)
@@ -170,6 +190,8 @@ public class MovementTest : MonoBehaviour
 
                 StartCoroutine(DownMeow());
             }
+
+            meowAudio.Play();
         }
     }
 
