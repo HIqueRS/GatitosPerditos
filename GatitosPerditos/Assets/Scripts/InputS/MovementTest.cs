@@ -30,6 +30,8 @@ public class MovementTest : MonoBehaviour
 
     [SerializeField]
     private int fish;
+    [SerializeField]
+    private AudioSource meowAudio;
 
     private bool isGrounded;
     private bool jumped;
@@ -44,6 +46,8 @@ public class MovementTest : MonoBehaviour
     private Animator animator;
 
     private SpriteRenderer sprite;
+
+
 
     
     // Start is called before the first frame update
@@ -155,6 +159,8 @@ public class MovementTest : MonoBehaviour
 
                 StartCoroutine(DownMeow());
             }
+
+            meowAudio.Play();
         }
     }
 
