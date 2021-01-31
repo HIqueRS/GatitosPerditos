@@ -214,7 +214,7 @@ public class RoomGenerator : MonoBehaviour
 			matriz[xpos,ypos] = -1;
 
 			positionObject.x = (larguraSala * ypos);
-			positionObject.y = -(alturaSala * xpos);
+			positionObject.y = -(alturaSala * xpos) + 1;
 			positionObject.z = 0;
 
 			GameObject.Instantiate(objects[i],positionObject,Quaternion.identity);
