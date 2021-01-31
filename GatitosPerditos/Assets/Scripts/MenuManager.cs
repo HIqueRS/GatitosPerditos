@@ -25,7 +25,7 @@ public class MenuManager : MonoBehaviour
     {
         StoryPanel.SetActive(true);
 
-        StartCoroutine(WaitTime(7.0f));
+        StartCoroutine(WaitTime(15.0f));
 
         
     }
@@ -68,8 +68,6 @@ public class MenuManager : MonoBehaviour
     private IEnumerator WaitTime(float waitTime)
     {
         yield return new WaitForSeconds(waitTime);
-        
-        LoadPanel.SetActive(true);
 
         StartCoroutine(LoadYourAsyncScene());
     }
