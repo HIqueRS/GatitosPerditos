@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class MovementTest : MonoBehaviour
 {
@@ -150,7 +151,7 @@ public class MovementTest : MonoBehaviour
 
                 if(position == otherPlayer.GetComponent<MovementTest>().position)
                 {
-                    //win condition
+                    SceneManager.LoadScene(2);
                 }
 
                 StartCoroutine(DownMeow());

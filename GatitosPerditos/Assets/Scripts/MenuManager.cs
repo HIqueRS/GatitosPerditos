@@ -16,13 +16,18 @@ public class MenuManager : MonoBehaviour
 
     [SerializeField]
     private GameObject LoadPanel;
+
+    [SerializeField]
+    private GameObject StoryPanel;
     
 
     public void PlayButton()
     {
-        LoadPanel.SetActive(true);
+        StoryPanel.SetActive(true);
 
-        StartCoroutine(LoadYourAsyncScene());
+        StartCoroutine(WaitTime(7.0f));
+
+        
     }
 
     public void ControlsButton()
@@ -58,5 +63,14 @@ public class MenuManager : MonoBehaviour
         {
             yield return null;
         }
+    }
+
+    private IEnumerator WaitTime(float waitTime)
+    {
+        yield return new WaitForSeconds(waitTime);
+        
+        LoadPanel.SetActive(true);
+
+        StartCoroutine(LoadYourAsyncScene());
     }
 }
