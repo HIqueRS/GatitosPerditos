@@ -41,6 +41,10 @@ public class MovementTest : MonoBehaviour
 
     public Vector2 position;
 
+    private Animator animator;
+
+    private SpriteRenderer sprite;
+
     
     // Start is called before the first frame update
     void Start()
@@ -65,6 +69,10 @@ public class MovementTest : MonoBehaviour
                     otherMeow = GameObject.FindGameObjectWithTag("Meow1");
                 break;
        }
+
+
+       animator = GetComponent<Animator>();
+       sprite = GetComponent<SpriteRenderer>();
     }
 
     // Update is called once per frame
@@ -75,9 +83,45 @@ public class MovementTest : MonoBehaviour
 
     private void InputsUpdate()
     {
-        Jump();
+        Animations();
+
         Move();
         Meow();
+        Jump();
+    }
+
+    private void Animations()
+    {
+         
+        if(dir < 0)
+        {
+            sprite.flipX = true;
+        }
+        else if(dir > 0)
+        {
+            sprite.flipX = false;
+        }
+
+        if(control.IsJumping() && isGrounded)
+        {
+            animator.SetTrigger("Jump");
+        }
+
+        if(control.IsMeowning() && isGrounded)
+        {
+            animator.SetTrigger("Meow");
+        }
+
+        
+        if(dir > 0 || dir < 0 )
+        {
+            animator.SetBool("Walk",true);
+        }
+        else
+        {
+            animator.SetBool("Walk",false);
+        }
+
     }
 
     private void Meow()
