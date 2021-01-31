@@ -197,7 +197,7 @@ MonoBehaviour:
   tagFish: Fish2
   tagFishUI: FishUI2
   speed: 5
-  jumpForce: 10
+  jumpForce: 11
   fish: 1
   position: {x: 0, y: 0}
 --- !u!212 &5552110745361532861

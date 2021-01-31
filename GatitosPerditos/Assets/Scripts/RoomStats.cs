@@ -18,4 +18,14 @@ public class RoomStats : MonoBehaviour
             other.transform.parent.GetChild(0).transform.position = new Vector3( camPos.position.x,camPos.position.y,-10);
         }
     }
+
+	private void OnTriggerStay2D(Collider2D collision)
+	{
+        if (collision.gameObject.CompareTag("Player"))
+        {
+            collision.gameObject.GetComponent<MovementTest>().position = id;
+
+            collision.transform.parent.GetChild(0).transform.position = new Vector3(camPos.position.x, camPos.position.y, -10);
+        }
+    }
 }
