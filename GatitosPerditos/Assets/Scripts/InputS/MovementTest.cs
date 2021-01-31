@@ -97,11 +97,11 @@ public class MovementTest : MonoBehaviour
 
                 if(fish == 1)
                 {
-                    otherMeow.transform.localPosition = meowDir*100;
+                    otherMeow.transform.localPosition = meowDir*200;
                 }
                 else
                 {
-                    otherMeow.transform.localPosition = (new Vector3(meowDir.x*-1,meowDir.y,0)*100);
+                    otherMeow.transform.localPosition = (new Vector3(meowDir.x*-1,meowDir.y,0)*200);
                 }
 
                 if(position == otherPlayer.GetComponent<MovementTest>().position)
