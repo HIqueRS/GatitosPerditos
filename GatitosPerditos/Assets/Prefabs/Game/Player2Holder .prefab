@@ -203,6 +203,8 @@ MonoBehaviour:
   fish: 1
   meowAudio: {fileID: 310082856403230914}
   position: {x: 0, y: 0}
+  meowRight: {fileID: 21300000, guid: 571f5b6d80289654b8726dcc0fcd5b54, type: 3}
+  meowLeft: {fileID: 21300000, guid: 458f51256f01fd344ba282f7a2038719, type: 3}
 --- !u!212 &5552110745361532861
 SpriteRenderer:
   m_ObjectHideFlags: 0
