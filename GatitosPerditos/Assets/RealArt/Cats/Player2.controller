@@ -54,7 +54,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: e944986890ab6e34bbd3d588fbed96e4, type: 2}
+  m_Motion: {fileID: 7400000, guid: e518ffc117617cf429043ec2d8f15806, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: Mirror
@@ -66,7 +66,7 @@ AnimatorController:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: sprite sheet - idle_1
+  m_Name: Player1
   serializedVersion: 5
   m_AnimatorParameters:
   - m_Name: Mirror
@@ -127,7 +127,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: 004aaef84866c6a4687d1931dde72739, type: 2}
+  m_Motion: {fileID: 7400000, guid: a0cc88f742710b947b8403826963e04c, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
@@ -176,7 +176,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: d4116cc1cec474d4e896e7d703bbf60c, type: 2}
+  m_Motion: {fileID: 7400000, guid: 3d49f9fd0dc075244a5a68ea77f90ef3, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
@@ -253,7 +253,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: 4c8d803d322f74a41be6d68d611b0441, type: 2}
+  m_Motion: {fileID: 7400000, guid: ac3fd44aaea7bae45b733bc40e1fefa5, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
