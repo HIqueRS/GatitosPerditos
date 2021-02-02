@@ -20,13 +20,37 @@ public class MenuManager : MonoBehaviour
     [SerializeField]
     private GameObject StoryPanel;
     
+    [SerializeField]
+    private InputSchema p1;
+    [SerializeField]
+    private InputSchema p2;
+
+    private bool play;
+    
+    private void Start() {
+        play = false;
+    }
+
+    private void Update() {
+
+        if(play)
+        {
+            if(p1.IsMeowning() || p2.IsMeowning())
+            {   
+                play = false;
+                StartCoroutine(LoadYourAsyncScene());
+            }
+        }
+        
+    }
 
     public void PlayButton()
     {
         StoryPanel.SetActive(true);
 
-        StartCoroutine(WaitTime(15.0f));
+        play = true;
 
+        StartCoroutine(WaitTime(15.0f));
         
     }
 

@@ -1307,6 +1307,8 @@ MonoBehaviour:
   CreditsPanel: {fileID: 2038866886}
   LoadPanel: {fileID: 26398442}
   StoryPanel: {fileID: 1427598842}
+  p1: {fileID: 11400000, guid: 66cc53a1c367e4240b322f861c9bfd19, type: 2}
+  p2: {fileID: 11400000, guid: 37f321ad567fe53458757f7815f5efca, type: 2}
 --- !u!4 &1482389829
 Transform:
   m_ObjectHideFlags: 0

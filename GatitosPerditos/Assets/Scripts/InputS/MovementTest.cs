@@ -16,8 +16,6 @@ public class MovementTest : MonoBehaviour
     
     private GameObject otherMeow;
 
-    private GameObject[] fishes;
-
     [SerializeField]
     private string tagFish;
     [SerializeField]
@@ -52,6 +50,8 @@ public class MovementTest : MonoBehaviour
     public Sprite meowRight;
     public Sprite meowLeft;
 
+    private ManagerCanvas canvas;
+
 
 
     
@@ -65,17 +65,19 @@ public class MovementTest : MonoBehaviour
 
        status.fish[fish] = 0;
 
-       
+       canvas = GameObject.FindGameObjectWithTag("Canvas").GetComponent<ManagerCanvas>();
+
+
 
        switch (fish)
        {
             case 0:
-                    fishes =  GameObject.FindGameObjectsWithTag("FishUI1");
-                    otherMeow = GameObject.FindGameObjectWithTag("Meow2");
+                   
+                    otherMeow = canvas.meows[fish];
                 break;
             case 1:  
-                    fishes =  GameObject.FindGameObjectsWithTag("FishUI2");
-                    otherMeow = GameObject.FindGameObjectWithTag("Meow1");
+                  
+                    otherMeow = canvas.meows[fish];
                 break;
        }
 
@@ -197,7 +199,7 @@ public class MovementTest : MonoBehaviour
 
     IEnumerator DownMeow()
     {
-        // suspend execution for 5 seconds
+    
         yield return new WaitForSeconds(0.6f);
         
        otherMeow.GetComponent<Image>().color = new Color(0,0,0,0);
@@ -235,11 +237,7 @@ public class MovementTest : MonoBehaviour
         }
         else if(collision.gameObject.CompareTag(tagFish))
         {
-            status.fish[fish]+=1;
-
-            fishes[status.fish[fish]-1].GetComponent<Image>().color = Color.white;
-
-            
+            canvas.AtualizeUI(fish);
 
             GameObject.Destroy(collision.gameObject);
 

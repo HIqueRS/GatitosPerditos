@@ -12,6 +12,7 @@ TagManager:
   - FishUI2
   - Meow1
   - Meow2
+  - Canvas
   layers:
   - Default
   - TransparentFX

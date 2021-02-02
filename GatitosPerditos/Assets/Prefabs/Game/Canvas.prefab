@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 4389579640227908228}
   - component: {fileID: 4389579640227908235}
   m_Layer: 5
-  m_Name: Image
+  m_Name: Meow2
   m_TagString: Meow2
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -122,7 +122,7 @@ GameObject:
   - component: {fileID: 4389579640472851221}
   - component: {fileID: 4389579640472851220}
   m_Layer: 5
-  m_Name: FishUI
+  m_Name: FishUI3
   m_TagString: FishUI1
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -232,7 +232,7 @@ GameObject:
   - component: {fileID: 4389579640635919938}
   - component: {fileID: 4389579640635919937}
   m_Layer: 5
-  m_Name: FishUI
+  m_Name: FishUI5
   m_TagString: FishUI1
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -306,7 +306,7 @@ GameObject:
   - component: {fileID: 4389579641105584189}
   - component: {fileID: 4389579641105584188}
   m_Layer: 5
-  m_Name: FishUI
+  m_Name: FishUI4
   m_TagString: FishUI1
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -380,7 +380,7 @@ GameObject:
   - component: {fileID: 4389579641286694208}
   - component: {fileID: 4389579641286694215}
   m_Layer: 5
-  m_Name: FishUI
+  m_Name: FishUI1
   m_TagString: FishUI2
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -454,7 +454,7 @@ GameObject:
   - component: {fileID: 4389579641520358185}
   - component: {fileID: 4389579641520358184}
   m_Layer: 5
-  m_Name: FishUI
+  m_Name: FishUI1
   m_TagString: FishUI1
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -525,13 +525,13 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4389579641543946512}
-  - component: {fileID: 4389579641543946513}
+  - component: {fileID: 1554918599407677653}
   - component: {fileID: 4389579641543946519}
   - component: {fileID: 4389579641543946518}
   - component: {fileID: 4389579641543946517}
   m_Layer: 5
   m_Name: Canvas
-  m_TagString: Untagged
+  m_TagString: Canvas
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -560,7 +560,7 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
---- !u!114 &4389579641543946513
+--- !u!114 &1554918599407677653
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -569,11 +569,25 @@ MonoBehaviour:
   m_GameObject: {fileID: 4389579641543946516}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3bfdd0ae0af6b3544835348e9a2c7e2c, type: 3}
+  m_Script: {fileID: 11500000, guid: 98ff3c0940309c84ab3570e83deab49a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fish1: {fileID: 0}
-  fish2: {fileID: 0}
+  fish1:
+  - {fileID: 4389579641520358184}
+  - {fileID: 4389579642189383723}
+  - {fileID: 4389579640472851220}
+  - {fileID: 4389579641105584188}
+  - {fileID: 4389579640635919937}
+  fish2:
+  - {fileID: 4389579641286694215}
+  - {fileID: 4389579641743497553}
+  - {fileID: 4389579642049929215}
+  - {fileID: 4389579641966907097}
+  - {fileID: 4389579641823698459}
+  status: {fileID: 11400000, guid: f377c5697bdf4994184c0501a16a670b, type: 2}
+  meows:
+  - {fileID: 4389579640227908233}
+  - {fileID: 4389579641633790992}
 --- !u!223 &4389579641543946519
 Canvas:
   m_ObjectHideFlags: 0
@@ -646,7 +660,7 @@ GameObject:
   - component: {fileID: 4389579641633790995}
   - component: {fileID: 4389579641633790994}
   m_Layer: 5
-  m_Name: Image
+  m_Name: meow1
   m_TagString: Meow1
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -720,7 +734,7 @@ GameObject:
   - component: {fileID: 4389579641743497554}
   - component: {fileID: 4389579641743497553}
   m_Layer: 5
-  m_Name: FishUI (1)
+  m_Name: FishUI2
   m_TagString: FishUI2
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -794,7 +808,7 @@ GameObject:
   - component: {fileID: 4389579641823698452}
   - component: {fileID: 4389579641823698459}
   m_Layer: 5
-  m_Name: FishUI (4)
+  m_Name: FishUI5
   m_TagString: FishUI2
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -942,7 +956,7 @@ GameObject:
   - component: {fileID: 4389579641966907098}
   - component: {fileID: 4389579641966907097}
   m_Layer: 5
-  m_Name: FishUI (3)
+  m_Name: FishUI4
   m_TagString: FishUI2
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1016,7 +1030,7 @@ GameObject:
   - component: {fileID: 4389579642049929208}
   - component: {fileID: 4389579642049929215}
   m_Layer: 5
-  m_Name: FishUI (2)
+  m_Name: FishUI3
   m_TagString: FishUI2
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1170,7 +1184,7 @@ GameObject:
   - component: {fileID: 4389579642189383716}
   - component: {fileID: 4389579642189383723}
   m_Layer: 5
-  m_Name: FishUI
+  m_Name: FishUI2
   m_TagString: FishUI1
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
