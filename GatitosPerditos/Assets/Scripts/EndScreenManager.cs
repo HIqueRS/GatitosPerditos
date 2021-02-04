@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class EndScreenManager : MonoBehaviour
 {
@@ -12,7 +13,10 @@ public class EndScreenManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        CoolDown(3);
+        StartCoroutine(CoolDown(3));
+       
+
+
     }
 
     private IEnumerator CoolDown(float waitTime)
@@ -20,6 +24,7 @@ public class EndScreenManager : MonoBehaviour
         yield return new WaitForSeconds(waitTime);
 
         mainMenuButton.SetActive(true);
+        mainMenuButton.GetComponent<Button>().Select();
     }
 
     public void MainMenuButton()

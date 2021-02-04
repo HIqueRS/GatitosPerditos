@@ -30,6 +30,8 @@ public class RoomGenerator : MonoBehaviour
 	private Vector3 positionObject;
     void Start()
     {
+		Random.seed = Random.Range(0,999999);
+
 		salasViaveis = 0;
 		xMeio = altura / 2;
 		yMeio = largura / 2;
@@ -194,7 +196,7 @@ public class RoomGenerator : MonoBehaviour
 
 			} while (matriz[xpos,ypos] <= 0);
 			
-			Debug.Log(matriz[xpos,ypos]);
+			
 
 			matriz[xpos,ypos] = -1;
 
@@ -210,7 +212,7 @@ public class RoomGenerator : MonoBehaviour
 		{
 			xpos = Random.Range(1,altura-1);
 			ypos = Random.Range(1,largura-1);
-			//Debug.Log(matriz[xpos,ypos]);
+		
 		} while (matriz[xpos,ypos] <= 0);
 
 		matriz[xpos,ypos] = -1;

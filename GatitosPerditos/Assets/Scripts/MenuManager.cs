@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class MenuManager : MonoBehaviour
 {
@@ -26,21 +27,31 @@ public class MenuManager : MonoBehaviour
     private InputSchema p2;
 
     private bool play;
+
+    [SerializeField]
+    private Button firstbt;
+    [SerializeField]
+    private Button backCredits;
+    [SerializeField]
+    private Button backControls;
     
     private void Start() {
         play = false;
+
+        firstbt.Select();
     }
 
     private void Update() {
 
         if(play)
         {
-            if(p1.IsMeowning() || p2.IsMeowning())
+            if(p1.IsMeowning() || p2.IsMeowning() || p1.IsJumping() || p2.IsJumping())
             {   
                 play = false;
                 StartCoroutine(LoadYourAsyncScene());
             }
         }
+
         
     }
 
@@ -58,24 +69,28 @@ public class MenuManager : MonoBehaviour
     {
         ControlsPanel.SetActive(true);
         ButtonsPanel.SetActive(false);
+        backControls.Select();
     }
 
     public void CreditsButton()
     {
         CreditsPanel.SetActive(true);
         ButtonsPanel.SetActive(false);
+        backCredits.Select();
     }
 
     public void CloseCredits()
     {
         CreditsPanel.SetActive(false);
         ButtonsPanel.SetActive(true);
+        firstbt.Select();
     }
 
     public void CloseControls()
     {
         ControlsPanel.SetActive(false);
         ButtonsPanel.SetActive(true);
+        firstbt.Select();
     }
 
     private IEnumerator LoadYourAsyncScene()
